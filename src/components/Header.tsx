@@ -30,10 +30,9 @@ const Header: React.FC = () => {
   const bg           = useColorModeValue('white',    'gray.800');
   const borderColor  = useColorModeValue('gray.200', 'gray.700');
   const navLinks = [
-    { label: 'Government',      to: '/government' },
-    { label: 'Law Enforcement', to: '/law-enforcement' },
+    { label: 'Tech',      to: '/techSector' },
+    { label: 'Medical', to: '/medicalSector' },
     { label: 'Industry',        to: '/industry' },
-    { label: 'FOIA Requests',   to: '/foia' },
     { label: 'Docs',         to: '/documents' },
   ];
 
@@ -42,7 +41,7 @@ const Header: React.FC = () => {
       <Flex h={16} alignItems="center" justifyContent="space-between">
         <RouterLink to="/">
           <Text fontSize="xl" fontWeight="bold" color="red.500">
-            The Oversight Report
+            GRAPH SHIFT
           </Text>
         </RouterLink>
 

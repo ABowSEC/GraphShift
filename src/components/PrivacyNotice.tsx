@@ -29,8 +29,7 @@ const PrivacyNotice: React.FC = () => {
         <AlertDescription>
           <VStack align="start" spacing={2} mt={2}>
             <Text fontSize="sm">
-              Your privacy and security are our top priorities. All data is encrypted,
-              and we never track or store personal information.
+              Your privacy and security are our top priorities. We never track or store personal information.
             </Text>
             <Text fontSize="sm">
               Contributors can submit information anonymously through our secure channels.

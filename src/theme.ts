@@ -1,12 +1,51 @@
 // src/theme.ts
 import { extendTheme, type ThemeConfig } from "@chakra-ui/react";
 
-// Config to enable light/dark mode toggling
 const config: ThemeConfig = {
   initialColorMode: "light",
   useSystemColorMode: false,
 };
 
-const theme = extendTheme({ config });
+// 10 shades of green 
+const colors = {
+  brand: {
+    50:  "#f0fff4",
+    100: "#c6f6d5",
+    200: "#9ae6b4",
+    300: "#68d391",
+    400: "#48bb78",
+    500: "#38a169",  // primary “500” green
+    600: "#2f855a",
+    700: "#276749",
+    800: "#22543d",
+    900: "#1c4532",
+  },
+};
+
+const theme = extendTheme({
+  semanticTokens: {
+  colors: {
+    bg: {
+      default: "brand.50",   // light-mode background
+      _dark: "brand.800",    // dark-mode background
+    },
+    text: {
+      default: "brand.700",  // light-mode text
+      _dark: "brand.200",    // dark-mode text
+    },
+  }
+},
+  config,
+  colors,
+  components: {
+    Button: {
+      defaultProps: {
+        colorScheme: "brand",  // all <Button> now default to brand green
+      },
+    },
+    //  do the same for other components, e.g. 
+    // Badge, Switch, Checkbox, etc.
+  },
+});
 
 export default theme;
